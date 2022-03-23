@@ -9,4 +9,8 @@ export const Colors = {
 	primaryDark: '#3D3A62',
 	warning: '#F4CA8F',
 	navbarColor: '#292E4E',
+	dark: '#313131',
+	white: '#FFFFFF',
+	black: '#000000',
+	gray: '#cccccc',
 };
