@@ -14,6 +14,7 @@
 		6172F2D35A4C3AA820D92908 /* libPods-Aking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-Aking.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-Aking-AkingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-Aking-AkingTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		EF08923927EAE74B00B674D9 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF08923827EAE74B00B674D9 /* BootSplash.storyboard */; };
 		EF1E160827EA9718003906EE /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF1E160327EA9718003906EE /* Roboto-Black.ttf */; };
 		EF1E160927EA9718003906EE /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF1E160427EA9718003906EE /* Roboto-Italic.ttf */; };
 		EF1E160A27EA9718003906EE /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF1E160527EA9718003906EE /* Roboto-Bold.ttf */; };
@@ -49,6 +50,7 @@
 		C0A881CF5CF3F2B244570E2A /* Pods-Aking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aking.debug.xcconfig"; path = "Target Support Files/Pods-Aking/Pods-Aking.debug.xcconfig"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-Aking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aking.release.xcconfig"; path = "Target Support Files/Pods-Aking/Pods-Aking.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EF08923827EAE74B00B674D9 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = Aking/BootSplash.storyboard; sourceTree = "<group>"; };
 		EF1E160327EA9718003906EE /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		EF1E160427EA9718003906EE /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Italic.ttf"; path = "../../assets/fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		EF1E160527EA9718003906EE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				EF08923827EAE74B00B674D9 /* BootSplash.storyboard */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -268,6 +271,7 @@
 				EF1E160C27EA9718003906EE /* Roboto-Thin.ttf in Resources */,
 				EF1E160B27EA9718003906EE /* Roboto-Regular.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				EF08923927EAE74B00B674D9 /* BootSplash.storyboard in Resources */,
 				EF1E160927EA9718003906EE /* Roboto-Italic.ttf in Resources */,
 				EF1E160A27EA9718003906EE /* Roboto-Bold.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
