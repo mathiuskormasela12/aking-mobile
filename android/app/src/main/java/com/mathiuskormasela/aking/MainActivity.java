@@ -1,4 +1,4 @@
-package com.akingmobile;
+package com.mathiuskormasela.aking;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "AkingMobile";
+    return "Aking";
   }
 }
