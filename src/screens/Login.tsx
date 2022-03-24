@@ -7,10 +7,11 @@ import {
 	Text,
 	StatusBar,
 	Platform,
+	Dimensions,
 	StyleSheet,
-	TouchableOpacity,
 } from 'react-native';
 import {connect} from 'react-redux';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {Colors} from '../themes';
 import {IAuthProps} from '../config';
 import {Fonts} from '../themes';
@@ -22,6 +23,8 @@ interface IStates {
 	username: string;
 	password: string;
 }
+
+const window = Dimensions.get('window');
 
 class Login extends Component<IAuthProps, IStates> {
 	constructor(props: any) {
@@ -58,7 +61,7 @@ class Login extends Component<IAuthProps, IStates> {
 				{Platform.OS === 'ios' && <SafeAreaView style={styles.topBar} />}
 				<SafeAreaView style={styles.fragment}>
 					<StatusBar backgroundColor={Colors.white} barStyle={'dark-content'} />
-					<View style={styles.hero}>
+					<KeyboardAwareScrollView style={styles.hero} enableOnAndroid>
 						<Container containerWidth={85}>
 							<View style={styles.header}>
 								<Text style={styles.title}>Welcome Back</Text>
@@ -94,9 +97,11 @@ class Login extends Component<IAuthProps, IStates> {
 									</View>
 								</View>
 								<View style={styles.control}>
-									<TouchableOpacity onPress={() => this.goTo('ForgotPassword')}>
-										<Text style={styles.forgot}>Forgot Password</Text>
-									</TouchableOpacity>
+									<Text
+										style={styles.forgot}
+										onPress={() => this.goTo('ForgotPassword')}>
+										Forgot Password
+									</Text>
 								</View>
 								<View style={[styles.control, styles.lastControl]}>
 									<Buttton variant="primary" fluid>
@@ -105,7 +110,7 @@ class Login extends Component<IAuthProps, IStates> {
 								</View>
 							</View>
 						</Container>
-					</View>
+					</KeyboardAwareScrollView>
 				</SafeAreaView>
 			</Fragment>
 		);
@@ -120,21 +125,21 @@ const styles: any = StyleSheet.create({
 		backgroundColor: 'red',
 	},
 	fragment: {
-		flex: 1,
+		height: window.height,
 		backgroundColor: Colors.white,
 	},
 	header: {
-		flex: 1,
+		height: (20 / 100) * window.height,
 		alignItems: 'flex-start',
 		justifyContent: 'center',
 		backgroundColor: Colors.white,
 	},
 	form: {
-		flex: 3,
+		height: (80 / 100) * window.height,
 		backgroundColor: Colors.white,
 	},
 	hero: {
-		flex: 1,
+		height: window.height,
 		backgroundColor: Colors.white,
 	},
 	title: {
@@ -164,6 +169,7 @@ const styles: any = StyleSheet.create({
 	},
 	forgot: {
 		textAlign: 'right',
+		color: Colors.dark,
 		fontFamily: Fonts.regular,
 		fontWeight: 'bold',
 		fontSize: 16,

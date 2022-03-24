@@ -11,6 +11,8 @@ import SecondWelcome from './screens/SecondWelcome';
 import ThirdWelcome from './screens/ThirdWelcome';
 import Register from './screens/Register';
 import Login from './screens/Login';
+import ForgotPassword from './screens/ForgotPassword';
+import ResetPassword from './screens/ResetPassword';
 
 // import all components
 import {NavigationHeader} from './components';
@@ -49,6 +51,24 @@ function StackScreen() {
 					<Stack.Screen
 						name="Register"
 						component={Register}
+						options={{
+							title: '',
+							headerShadowVisible: false,
+							headerLeft: () => <NavigationHeader />,
+						}}
+					/>
+					<Stack.Screen
+						name="ForgotPassword"
+						component={ForgotPassword}
+						options={{
+							title: '',
+							headerShadowVisible: false,
+							headerLeft: () => <NavigationHeader />,
+						}}
+					/>
+					<Stack.Screen
+						name="ResetPassword"
+						component={ResetPassword}
 						options={{
 							title: '',
 							headerShadowVisible: false,

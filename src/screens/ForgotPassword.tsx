@@ -1,4 +1,4 @@
-// ========== Register
+// ========== ForgotPassword
 // import all modules
 import React, {Component, Fragment} from 'react';
 import {
@@ -20,57 +20,29 @@ import {Fonts} from '../themes';
 import {Container, TextField, Buttton} from '../components';
 
 interface IStates {
-	fullName: string;
 	username: string;
-	password: string;
-	repeatPassword: string;
 }
 
 const window = Dimensions.get('window');
 
-class Register extends Component<IAuthProps, IStates> {
+class ForgotPassword extends Component<IAuthProps, IStates> {
 	constructor(props: any) {
 		super(props);
 		this.state = {
-			fullName: '',
 			username: '',
-			password: '',
-			repeatPassword: '',
 		};
 
 		this.goTo = this.goTo.bind(this);
 		this.handleOnChangeEmail = this.handleOnChangeEmail.bind(this);
-		this.handleOnChangePassword = this.handleOnChangePassword.bind(this);
-		this.handleOnChangeFullName = this.handleOnChangeFullName.bind(this);
-		this.handleOnChangeRepeatPassword =
-			this.handleOnChangeRepeatPassword.bind(this);
 	}
 
 	public goTo(screen: string): void {
 		this.props.navigation.navigate(screen);
 	}
 
-	public handleOnChangeFullName(value: string): void {
-		this.setState(() => ({
-			fullName: value,
-		}));
-	}
-
 	public handleOnChangeEmail(value: string): void {
 		this.setState(() => ({
 			username: value,
-		}));
-	}
-
-	public handleOnChangePassword(value: string): void {
-		this.setState(() => ({
-			password: value,
-		}));
-	}
-
-	public handleOnChangeRepeatPassword(value: string): void {
-		this.setState(() => ({
-			repeatPassword: value,
 		}));
 	}
 
@@ -83,24 +55,13 @@ class Register extends Component<IAuthProps, IStates> {
 					<KeyboardAwareScrollView style={styles.hero} enableOnAndroid>
 						<Container containerWidth={85}>
 							<View style={styles.header}>
-								<Text style={styles.title}>Hi, Welcome to Aking</Text>
-								<Text style={styles.subtitle}>Sign Up to continue</Text>
+								<Text style={styles.title}>Forgot Password</Text>
+								<Text style={styles.subtitle}>
+									Please enter your email below to recevie your password reset
+									instructions
+								</Text>
 							</View>
 							<View style={styles.form}>
-								<View style={styles.control}>
-									<Text style={styles.label}>Full Name</Text>
-									<View style={styles.field}>
-										<TextField
-											placeholder="Enter your full name"
-											secureTextEntry={false}
-											keyboardType="default"
-											value={this.state.fullName}
-											onChangeText={(value: string) =>
-												this.handleOnChangeFullName(value)
-											}
-										/>
-									</View>
-								</View>
 								<View style={styles.control}>
 									<Text style={styles.label}>Username</Text>
 									<View style={styles.field}>
@@ -115,37 +76,12 @@ class Register extends Component<IAuthProps, IStates> {
 										/>
 									</View>
 								</View>
-								<View style={styles.control}>
-									<Text style={styles.label}>Password</Text>
-									<View style={styles.field}>
-										<TextField
-											placeholder="Enter your password"
-											secureTextEntry={true}
-											keyboardType="default"
-											value={this.state.password}
-											onChangeText={(value: string) =>
-												this.handleOnChangePassword(value)
-											}
-										/>
-									</View>
-								</View>
-								<View style={styles.control}>
-									<Text style={styles.label}>Repeat Password</Text>
-									<View style={styles.field}>
-										<TextField
-											placeholder="Enter your repeat password"
-											secureTextEntry={true}
-											keyboardType="default"
-											value={this.state.repeatPassword}
-											onChangeText={(value: string) =>
-												this.handleOnChangeRepeatPassword(value)
-											}
-										/>
-									</View>
-								</View>
 								<View style={[styles.control, styles.lastControl]}>
-									<Buttton variant="primary" fluid>
-										Register
+									<Buttton
+										variant="primary"
+										fluid
+										onPress={() => this.goTo('ResetPassword')}>
+										Send Request
 									</Buttton>
 								</View>
 							</View>
@@ -157,7 +93,7 @@ class Register extends Component<IAuthProps, IStates> {
 	}
 }
 
-export default connect(null, null)(Register);
+export default connect(null, null)(ForgotPassword);
 
 const styles: any = StyleSheet.create({
 	topBar: {
@@ -169,21 +105,14 @@ const styles: any = StyleSheet.create({
 		backgroundColor: Colors.white,
 	},
 	header: {
-		height:
-			Platform.OS === 'ios'
-				? (15 / 100) * window.height
-				: (13 / 100) * window.height,
+		height: (20 / 100) * window.height,
 		alignItems: 'flex-start',
 		justifyContent: 'center',
 		backgroundColor: Colors.white,
 	},
 	form: {
-		height:
-			Platform.OS === 'ios'
-				? (85 / 100) * window.height
-				: (87 / 100) * window.height,
+		height: (80 / 100) * window.height,
 		backgroundColor: Colors.white,
-		paddingTop: Platform.OS === 'android' ? 15 : 0,
 	},
 	hero: {
 		height: window.height,
