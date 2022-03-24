@@ -12,6 +12,9 @@ import ThirdWelcome from './screens/ThirdWelcome';
 import Register from './screens/Register';
 import Login from './screens/Login';
 
+// import all components
+import {NavigationHeader} from './components';
+
 const Stack = createNativeStackNavigator();
 
 function StackScreen() {
@@ -37,12 +40,20 @@ function StackScreen() {
 					<Stack.Screen
 						name="Login"
 						component={Login}
-						options={{headerShown: false}}
+						options={{
+							title: '',
+							headerShadowVisible: false,
+							headerLeft: () => <NavigationHeader />,
+						}}
 					/>
 					<Stack.Screen
 						name="Register"
 						component={Register}
-						options={{headerShown: false}}
+						options={{
+							title: '',
+							headerShadowVisible: false,
+							headerLeft: () => <NavigationHeader />,
+						}}
 					/>
 				</Stack.Navigator>
 			</NavigationContainer>
