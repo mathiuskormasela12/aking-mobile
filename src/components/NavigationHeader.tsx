@@ -9,6 +9,9 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
+// import all components
+import {Container} from './';
+
 // import assets
 import ArrowBack from '../assets/icons/arrow-back.svg';
 
@@ -22,15 +25,20 @@ export function NavigationHeader() {
 	};
 
 	return (
-		<SafeAreaView>
-			<TouchableOpacity style={styles.header} onPress={handleGoBack}>
-				<ArrowBack width={(5 / 100) * width} height={(5 / 100) * width} />
-			</TouchableOpacity>
+		<SafeAreaView style={styles.safeAreaView}>
+			<Container containerWidth={95}>
+				<TouchableOpacity style={styles.header} onPress={handleGoBack}>
+					<ArrowBack width={(5 / 100) * width} height={(5 / 100) * width} />
+				</TouchableOpacity>
+			</Container>
 		</SafeAreaView>
 	);
 }
 
 const styles = StyleSheet.create({
+	safeAreaView: {
+		flex: 1,
+	},
 	header: {
 		flex: 1,
 	},

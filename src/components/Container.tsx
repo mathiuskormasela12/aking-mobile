@@ -10,6 +10,7 @@ interface IOptionalProps extends IFunctionalComponentProps {
 	fluid?: boolean;
 	centerX?: boolean;
 	centerY?: boolean;
+	containerWidth?: number;
 }
 
 export function Container<T extends IOptionalProps>(props: T) {
@@ -19,6 +20,7 @@ export function Container<T extends IOptionalProps>(props: T) {
 				props.fluid ? styles.fluidContainer : styles.container,
 				props.centerX && styles.centerX,
 				props.centerY && styles.centerY,
+				props.containerWidth && {width: (props.containerWidth / 100) * width},
 			]}>
 			{props.children}
 		</View>

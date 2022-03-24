@@ -13,4 +13,7 @@ export const Colors = {
 	white: '#FFFFFF',
 	black: '#000000',
 	gray: '#cccccc',
+	darkGray: '#9B9B9B',
+	lightGray: '#C6C6C6',
+	youngGray: '#EDEDED',
 };
