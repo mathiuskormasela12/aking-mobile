@@ -13,6 +13,7 @@ import Register from './screens/Register';
 import Login from './screens/Login';
 import ForgotPassword from './screens/ForgotPassword';
 import ResetPassword from './screens/ResetPassword';
+import ResetPasswordSuccess from './screens/ResetPasswordSuccess';
 
 // import all components
 import {NavigationHeader} from './components';
@@ -73,6 +74,13 @@ function StackScreen() {
 							title: '',
 							headerShadowVisible: false,
 							headerLeft: () => <NavigationHeader />,
+						}}
+					/>
+					<Stack.Screen
+						name="ResetPasswordSuccess"
+						component={ResetPasswordSuccess}
+						options={{
+							headerShown: false,
 						}}
 					/>
 				</Stack.Navigator>

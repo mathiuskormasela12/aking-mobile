@@ -124,7 +124,10 @@ class ResetPassword extends Component<IAuthProps, IStates> {
 									</View>
 								</View>
 								<View style={[styles.control, styles.lastControl]}>
-									<Buttton variant="primary" fluid>
+									<Buttton
+										variant="primary"
+										fluid
+										onPress={() => this.goTo('ResetPasswordSuccess')}>
 										Change Password
 									</Buttton>
 								</View>
@@ -142,7 +145,7 @@ export default connect(null, null)(ResetPassword);
 const styles: any = StyleSheet.create({
 	topBar: {
 		flex: 0,
-		backgroundColor: 'red',
+		backgroundColor: Colors.white,
 	},
 	fragment: {
 		height: window.height,
