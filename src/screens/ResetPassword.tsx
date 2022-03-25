@@ -85,7 +85,7 @@ class ResetPassword extends Component<IAuthProps, IStates> {
 									<Text style={styles.label}>Reset Code</Text>
 									<View style={styles.field}>
 										<TextField
-											placeholder="Enter your full name"
+											placeholder="Enter your reset code"
 											secureTextEntry={false}
 											keyboardType="default"
 											value={this.state.resetCode}
@@ -100,7 +100,7 @@ class ResetPassword extends Component<IAuthProps, IStates> {
 									<View style={styles.field}>
 										<TextField
 											placeholder="Enter your new password"
-											secureTextEntry={false}
+											secureTextEntry={true}
 											keyboardType="default"
 											value={this.state.newPassword}
 											onChangeText={(value: string) =>
