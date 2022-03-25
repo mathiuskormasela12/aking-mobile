@@ -20,7 +20,7 @@ import {Fonts} from '../themes';
 // import all components
 import {Container, Buttton} from '../components';
 
-const width = Dimensions.get('screen').width;
+const size = Dimensions.get('window');
 
 class FirstWelcome extends Component<IWelcomeProps> {
 	constructor(props: any) {
@@ -147,12 +147,12 @@ const styles: any = StyleSheet.create({
 	},
 	img: {
 		resizeMode: 'contain',
-		width: (80 / 100) * width,
+		width: (80 / 100) * size.width,
 		flex: 1,
 	},
 	wave: {
 		flex: 1,
-		width,
+		width: size.width,
 		resizeMode: 'cover',
 	},
 	slidesTile: {
@@ -160,10 +160,10 @@ const styles: any = StyleSheet.create({
 		marginTop: 30,
 	},
 	tiles: {
-		width: (1.7 / 100) * width,
-		height: (1.7 / 100) * width,
+		width: (1.7 / 100) * size.width,
+		height: (1.7 / 100) * size.width,
 		backgroundColor: Colors.gray,
-		borderRadius: (1.7 / 100) * width,
+		borderRadius: (1.7 / 100) * size.width,
 		marginRight: 6,
 	},
 	activeTiles: {

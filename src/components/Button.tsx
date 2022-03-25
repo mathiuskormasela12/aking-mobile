@@ -5,7 +5,7 @@ import {TouchableOpacity, Text, Dimensions, StyleSheet} from 'react-native';
 import {Colors, Fonts} from '../themes';
 import {IFunctionalComponentProps} from '../config';
 
-const height = Dimensions.get('screen').height;
+const size = Dimensions.get('window');
 
 interface IOptionalProps extends IFunctionalComponentProps {
 	fluid?: boolean;
@@ -41,7 +41,7 @@ export function Buttton<T extends IOptionalProps>(props: T) {
 
 const styles: any = StyleSheet.create({
 	btn: {
-		height: (6 / 100) * height,
+		height: (6 / 100) * size.height,
 		borderRadius: 6,
 		flexDirection: 'row',
 		justifyContent: 'center',
