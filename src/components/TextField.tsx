@@ -44,5 +44,6 @@ const styles = StyleSheet.create({
 		borderStyle: 'solid',
 		paddingVertical: 12,
 		fontSize: 16,
+		color: Colors.dark,
 	},
 });

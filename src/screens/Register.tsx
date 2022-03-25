@@ -203,7 +203,7 @@ const styles: any = StyleSheet.create({
 		fontSize: 18,
 	},
 	control: {
-		marginBottom: 35,
+		marginBottom: Platform.OS === 'ios' ? 35 : 25,
 	},
 	field: {
 		marginTop: 10,
@@ -215,6 +215,6 @@ const styles: any = StyleSheet.create({
 		fontFamily: Fonts.bold,
 	},
 	lastControl: {
-		marginTop: 0,
+		marginTop: 10,
 	},
 });
