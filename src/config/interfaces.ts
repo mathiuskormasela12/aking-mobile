@@ -28,3 +28,17 @@ export interface IAuthProps {
 export interface IFunctionalComponentProps {
 	children?: any;
 }
+
+export interface IRegisterBody {
+	fullName: string;
+	username: string;
+	password: string;
+	passwordConfirmation: string;
+}
+
+export interface ILoginBody {
+	fullName: string;
+	username: string;
+	password: string;
+	passwordConfirmation: string;
+}
